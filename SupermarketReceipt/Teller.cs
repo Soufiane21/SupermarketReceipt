@@ -31,7 +31,8 @@ namespace SupermarketReceipt
                 receipt.AddProduct(p, quantity, unitPrice, price);
             }
 
-            theCart.HandleOffers(receipt, _offers, _catalog);
+            var offersHandler = new OffersHandler(theCart);
+            offersHandler.HandleOffers(receipt, _offers, _catalog);
 
             return receipt;
         }
