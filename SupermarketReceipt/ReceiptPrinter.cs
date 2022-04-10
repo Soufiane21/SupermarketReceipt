@@ -1,3 +1,5 @@
+using SupermarketReceipt.Entities;
+using SupermarketReceipt.Enums;
 using System.Globalization;
 using System.Text;
 

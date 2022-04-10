@@ -1,21 +1,31 @@
+using SupermarketReceipt.Entities;
+using SupermarketReceipt.Enums;
+using SupermarketReceipt.Helpers;
 using System.Collections.Generic;
 
 namespace SupermarketReceipt
 {
     public class Teller
     {
-        private readonly SupermarketCatalog _catalog;
-        private readonly Dictionary<Product, Offer> _offers = new Dictionary<Product, Offer>();
+        private readonly ISupermarketCatalog _catalog;
+        private readonly List<Offer> _offers;
 
-        public Teller(SupermarketCatalog catalog)
+        public Teller(ISupermarketCatalog catalog)
         {
             _catalog = catalog;
+            _offers = new List<Offer>();   
         }
 
         public void AddSpecialOffer(SpecialOfferType offerType, Product product, double argument)
         {
-            _offers[product] = new Offer(offerType, product, argument);
+            _offers.Add(new Offer(offerType, product, argument));
         }
+
+        public void AddSpecialOffer(SpecialOfferType offerType, List<Product> products, double argument)
+        {
+            _offers.Add(new Offer(offerType, products, argument));
+        }
+
 
         public Receipt ChecksOutArticlesFrom(ShoppingCart theCart)
         {
