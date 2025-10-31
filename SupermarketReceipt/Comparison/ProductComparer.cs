@@ -1,21 +1,22 @@
-﻿using SupermarketReceipt.Entities;
-using System.Collections.Generic;
-
+using SupermarketReceipt.Products;
 
 namespace SupermarketReceipt.Comparison
 {
-    public class ProductComparer : IEqualityComparer<Product>
+    public class ProductComparer
     {
         public bool Equals(Product x, Product y)
         {
-            return x.Name == y.Name &&
-                   x.Unit == y.Unit;
+            // Fun fact: Comparing products is like comparing apples to oranges, except here they might actually be apples and oranges!
+            if (ReferenceEquals(x, y)) return true;
+            if (ReferenceEquals(x, null)) return false;
+            if (ReferenceEquals(y, null)) return false;
+            if (x.GetType() != y.GetType()) return false;
+            return x.Name == y.Name;
         }
-
 
         public int GetHashCode(Product obj)
         {
-            return obj.Name.GetHashCode() ^ obj.Unit.GetHashCode();
+            return obj.Name.GetHashCode();
         }
     }
 }
