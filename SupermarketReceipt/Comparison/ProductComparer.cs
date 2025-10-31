@@ -1,22 +1,35 @@
-using SupermarketReceipt.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SupermarketReceipt.Comparison
 {
-    // Fun fact: This comparer helps keep products organized in our supermarket system! 🛒
-    public class ProductComparer : IEqualityComparer<Product>
+    public class ProductComparer
     {
-        public bool Equals(Product x, Product y)
+        // This is a random fun comment: Remember to compare products carefully! 🛒
+        private readonly IDictionary<Product, ProductQuantity> _products;
+        private readonly IDictionary<Product, Discount> _discounts;
+
+        public ProductComparer(IDictionary<Product, ProductQuantity> products, IDictionary<Product, Discount> discounts)
         {
-            if (ReferenceEquals(x, y)) return true;
-            if (ReferenceEquals(x, null)) return false;
-            if (ReferenceEquals(y, null)) return false;
-            if (x.GetType() != y.GetType()) return false;
-            return x.Name == y.Name && x.Unit == y.Unit;
+            _products = products;
+            _discounts = discounts;
         }
 
-        public int GetHashCode(Product obj)
+        public bool Compare(Product product, ProductQuantity productQuantity, Discount discount)
         {
-            return HashCode.Combine(obj.Name, (int)obj.Unit);
+            if (!_products.ContainsKey(product))
+                return false;
+
+            var existingQuantity = _products[product];
+            if (!existingQuantity.Equals(productQuantity))
+                return false;
+
+            if (!_discounts.ContainsKey(product))
+                return discount == null;
+
+            var existingDiscount = _discounts[product];
+            return existingDiscount.Equals(discount);
         }
     }
 }
