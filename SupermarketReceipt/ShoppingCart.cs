@@ -20,6 +20,7 @@ namespace SupermarketReceipt
 
         public void AddItem(Product product)
         {
+            // Add a single item to the shopping cart
             AddItemQuantity(product, 1.0);
         }
 
