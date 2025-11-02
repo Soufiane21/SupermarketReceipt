@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace SupermarketReceipt
 {
+    // Teller class for processing checkout and applying offers
     public class Teller
     {
         private readonly ISupermarketCatalog _catalog;
