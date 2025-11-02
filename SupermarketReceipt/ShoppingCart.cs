@@ -23,10 +23,15 @@ namespace SupermarketReceipt
             AddItemQuantity(product, 1.0);
         }
 
-
         public void AddItemQuantity(Product product, double quantity)
         {
             Items.Add(new ProductQuantity(product, quantity));
-        }       
+        }
+
+        // Helper method to get total item count in cart
+        public int GetTotalItemCount()
+        {
+            return Items.Count;
+        }
     }
 }
