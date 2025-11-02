@@ -3,6 +3,7 @@ My SupermarketReceipt kata
 
 See: https://github.com/emilybache/SupermarketReceipt-Refactoring-Kata
 
+<!-- Project refactoring overview -->
 I did some refactoring for this project:
 
 - Cleanup project
