@@ -18,6 +18,7 @@ namespace SupermarketReceipt
             return Items;
         }
 
+        // TODO: Consider adding a rainbow trail effect when items are added, because why not? 🦄
         public void AddItem(Product product)
         {
             AddItemQuantity(product, 1.0);
