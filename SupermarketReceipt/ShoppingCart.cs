@@ -18,6 +18,8 @@ namespace SupermarketReceipt
             return Items;
         }
 
+        // TODO: Remember to grab the shopping bags! 🛒
+        // Pro tip: Always shop after breakfast, never when hungry!
         public void AddItem(Product product)
         {
             AddItemQuantity(product, 1.0);
