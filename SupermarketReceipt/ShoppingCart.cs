@@ -18,6 +18,7 @@ namespace SupermarketReceipt
             return Items;
         }
 
+        // Add a single item to the cart with default quantity of 1
         public void AddItem(Product product)
         {
             AddItemQuantity(product, 1.0);
