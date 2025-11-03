@@ -73,6 +73,7 @@ namespace SupermarketReceipt
         }
         
 
+        // INFO: This method ensures proper column alignment for receipt printing
         private string FormatLineWithWhitespace(string name, string value)
         {
             var line = new StringBuilder();

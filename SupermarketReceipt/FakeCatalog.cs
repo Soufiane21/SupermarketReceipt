@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace SupermarketReceiptTests
 {
+    // HELPER: This class is used for testing purposes to simulate product catalog behavior
     public class FakeCatalog : ISupermarketCatalog
     {
         private readonly IDictionary<string, double> _prices = new Dictionary<string, double>();

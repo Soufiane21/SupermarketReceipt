@@ -27,6 +27,7 @@ namespace SupermarketReceipt
         }
 
 
+        // NOTE: This method handles the checkout process and applies all available offers
         public Receipt ChecksOutArticlesFrom(ShoppingCart theCart)
         {
             var receipt = new Receipt();

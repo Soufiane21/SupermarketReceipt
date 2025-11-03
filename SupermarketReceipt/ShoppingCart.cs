@@ -18,6 +18,7 @@ namespace SupermarketReceipt
             return Items;
         }
 
+        // TODO: Consider adding validation to prevent adding null products
         public void AddItem(Product product)
         {
             AddItemQuantity(product, 1.0);
