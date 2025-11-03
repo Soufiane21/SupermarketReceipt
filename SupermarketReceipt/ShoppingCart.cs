@@ -13,6 +13,12 @@ namespace SupermarketReceipt
             Items = new List<ProductQuantity>();
         }
 
+        /// <summary>
+        /// Haalt de lijst van alle items in het winkelwagentje op.
+        /// Deze method retourneert een lijst van ProductQuantity objecten die de producten
+        /// en hun hoeveelheden bevatten die de klant wil kopen.
+        /// </summary>
+        /// <returns>Een List van ProductQuantity objecten die alle items in het winkelwagentje representeren</returns>
         public List<ProductQuantity> GetItems()
         {
             return Items;
