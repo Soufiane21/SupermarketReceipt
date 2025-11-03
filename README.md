@@ -8,3 +8,5 @@ I did some refactoring for this project:
 - Cleanup project
 - Refactor code, making it future proof and readable (using clean code and SOLID principles)
 - Implemented some design patterns
+
+<!-- Test comment: This is a test commit created for demonstration purposes -->
