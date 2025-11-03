@@ -72,7 +72,7 @@ namespace SupermarketReceipt
             return line;
         }
         
-
+        // Format a line with proper whitespace padding to align columns
         private string FormatLineWithWhitespace(string name, string value)
         {
             var line = new StringBuilder();
