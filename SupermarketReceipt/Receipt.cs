@@ -9,6 +9,7 @@ namespace SupermarketReceipt
         private readonly List<Discount> _discounts = new List<Discount>();
         private readonly List<ReceiptItem> _items = new List<ReceiptItem>();
 
+        // IMPORTANT: Total price calculation includes all discounts applied
         public double GetTotalPrice()
         {
             var total = 0.0;
