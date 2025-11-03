@@ -8,6 +8,14 @@ namespace SupermarketReceipt
     {
         public List<ProductQuantity> Items { get; private set; }
 
+        /// <summary>
+        /// Initialiseert een nieuw exemplaar van de ShoppingCart klasse.
+        /// Deze constructor maakt een lege winkelwagen aan door een nieuwe lijst 
+        /// van ProductQuantity objecten te instantiëren. De lijst wordt gebruikt om 
+        /// alle producten en hun hoeveelheden bij te houden die de klant wil kopen.
+        /// Dit is het startpunt voor elke winkelervaring - een lege mand die klaar 
+        /// staat om gevuld te worden met artikelen.
+        /// </summary>
         public ShoppingCart()
         {
             Items = new List<ProductQuantity>();
