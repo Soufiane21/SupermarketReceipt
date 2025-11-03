@@ -18,6 +18,7 @@ namespace SupermarketReceipt
             return Items;
         }
 
+        // TODO: Consider implementing a bulk add feature for multiple items at once
         public void AddItem(Product product)
         {
             AddItemQuantity(product, 1.0);
