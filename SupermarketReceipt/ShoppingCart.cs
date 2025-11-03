@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace SupermarketReceipt
 {
+    // TODO: Remember to buy milk on the way home! 🥛
     public class ShoppingCart
     {
         public List<ProductQuantity> Items { get; private set; }
