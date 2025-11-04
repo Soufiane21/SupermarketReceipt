@@ -17,5 +17,7 @@ namespace SupermarketReceipt.Strategies
         }
 
         public abstract Discount GetDiscount();
+
+        // This is a random comment added for demonstration purposes.
     }
 }
