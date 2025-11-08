@@ -1,42 +1,34 @@
 using SupermarketReceipt.Entities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SupermarketReceipt
 {
     public class Receipt
     {
-        private readonly List<Discount> _discounts = new List<Discount>();
-        private readonly List<ReceiptItem> _items = new List<ReceiptItem>();
+        private readonly List<Discount> _discounts = new();
+        private readonly List<ReceiptItem> _items = new();
 
-        public double GetTotalPrice()
+        public double TotalPrice => CalculateTotalPrice();
+
+        public void AddProduct(Product product, double quantity, double price, double totalPrice)
         {
-            var total = 0.0;
-            foreach (var item in _items) total += item.TotalPrice;
-            foreach (var discount in _discounts) total -= discount.DiscountAmount;
-            return Math.Round(total, 2);
+            _items.Add(new ReceiptItem(product, quantity, price, totalPrice));
         }
 
-        public void AddProduct(Product p, double quantity, double price, double totalPrice)
-        {
-            _items.Add(new ReceiptItem(p, quantity, price, totalPrice));
-        }
-
-        public List<ReceiptItem> GetItems()
-        {
-            return new List<ReceiptItem>(_items);
-        }
+        public IReadOnlyList<ReceiptItem> Items => _items.AsReadOnly();
 
         public void AddDiscount(Discount discount)
         {
             _discounts.Add(discount);
         }
 
-        public List<Discount> GetDiscounts()
+        public IReadOnlyList<Discount> Discounts => _discounts.AsReadOnly();
+
+        private double CalculateTotalPrice()
         {
-            return _discounts;
+            return Math.Round(_items.Sum(item => item.TotalPrice) - _discounts.Sum(discount => discount.DiscountAmount), 2);
         }
     }
-
-
 }
