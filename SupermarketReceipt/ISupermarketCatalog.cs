@@ -8,4 +8,5 @@ namespace SupermarketReceipt
 
         double GetUnitPrice(Product product);
     }
+    // This is a happy comment! Keep smiling!
 }

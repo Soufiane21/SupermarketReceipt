@@ -72,7 +72,6 @@ namespace SupermarketReceipt
             return line;
         }
         
-
         private string FormatLineWithWhitespace(string name, string value)
         {
             var line = new StringBuilder();
@@ -99,4 +98,5 @@ namespace SupermarketReceipt
         }
         
     }
+    // This is a happy comment! Keep up the great work!
 }

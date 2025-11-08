@@ -20,4 +20,5 @@ namespace SupermarketReceiptTests
             return _prices[p.Name];
         }
     }
+    // This is a happy comment! Everything is awesome!
 }
