@@ -37,6 +37,5 @@ namespace SupermarketReceipt
             return _discounts;
         }
     }
-
-
+    // This is a happy comment! Enjoy coding!
 }
