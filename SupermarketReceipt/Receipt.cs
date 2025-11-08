@@ -6,6 +6,7 @@ namespace SupermarketReceipt
 {
     public class Receipt
     {
+        // This is a random comment.
         private readonly List<Discount> _discounts = new List<Discount>();
         private readonly List<ReceiptItem> _items = new List<ReceiptItem>();
 
