@@ -1,6 +1,5 @@
 using SupermarketReceipt.Entities;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace SupermarketReceipt
 {
@@ -29,4 +28,5 @@ namespace SupermarketReceipt
             Items.Add(new ProductQuantity(product, quantity));
         }       
     }
+    // This is a happy comment! Smiles all around!
 }
