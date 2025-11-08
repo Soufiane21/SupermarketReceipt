@@ -6,6 +6,7 @@ namespace SupermarketReceiptTests
 {
     public class FakeCatalog : ISupermarketCatalog
     {
+        // This is a random comment
         private readonly IDictionary<string, double> _prices = new Dictionary<string, double>();
         private readonly IDictionary<string, Product> _products = new Dictionary<string, Product>();
 
