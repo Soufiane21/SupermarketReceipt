@@ -38,5 +38,5 @@ namespace SupermarketReceipt
         }
     }
 
-
+// This is a random comment added for testing purposes.
 }
