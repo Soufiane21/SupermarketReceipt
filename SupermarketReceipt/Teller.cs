@@ -26,7 +26,7 @@ namespace SupermarketReceipt
             _offers.Add(new Offer(offerType, products, argument));
         }
 
-
+        // Process cart items and apply any available special offers to generate final receipt
         public Receipt ChecksOutArticlesFrom(ShoppingCart theCart)
         {
             var receipt = new Receipt();
