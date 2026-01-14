@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace SupermarketReceipt
 {
+    // This class represents a shopping receipt with items and discounts applied
     public class Receipt
     {
         private readonly List<Discount> _discounts = new List<Discount>();
